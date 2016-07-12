@@ -13,7 +13,6 @@
 
 .hero {
   background: url('world.jpeg') no-repeat center center fixed;
-  opacity: 0.7;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,7 +25,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin:0;
 }
 
-/* .frosty {
+.frosty {
   background:rgba(0,0,0, 0.5);
   color: white;
   width: 100%;
@@ -35,18 +34,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
   display: block;
   padding: 20px;
 }
-*/
+
 .frosty h1 {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   font-size: 5em;
   text-shadow: rgba(0,0,0,0.5) 2px 2px;
-  color: white;
-  opacity: 1;
-  margin: 0 auto;
-  margin-top: 100px;
-  display: block;
-  padding: 20px;
+
   
 }
 
@@ -63,5 +57,22 @@ h1, h2, h3, h4, h5, h6, .navbar {
 body {
   background:url('sos.png');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
 
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding:10px;
+}
+
+.booyah-box h2, .booyah-box h1 {
+  margin:10px;
+}
+
+.clr {
+  clear:both;
 }

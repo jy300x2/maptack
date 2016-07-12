@@ -1,0 +1,9 @@
+<div class="booyah-box col-xs-10 col-xs-offset-1 text-center">
+  <h1>Your Maps</h1>
+  <br />
+  <% @maps.each do |map| %>
+    <h2><%= link_to map.title, map_path(map) %></h2>
+    <p><%= map.description %></p>
+  <% end %>
+
+</div>
