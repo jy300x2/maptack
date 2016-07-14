@@ -3,5 +3,22 @@
   <h2 class="text-center"><%= @map.title %></h2>
   <p class="text-center"><%= @map.description %></p>
   <br />
+  <script src="http://openlayers.org/en/v3.17.1/build/ol.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    var map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([37.41, 8.82]),
+        zoom: 12
+      })
+    });
+  </script>
+  <div id="map" class="map"></div>
   <p><%= link_to "Return to your maps", maps_path %></p>
 </div>
