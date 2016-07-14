@@ -18,7 +18,28 @@ class MapsController < ApplicationController
     @map = Map.find(params[:id])
   end
 
+  def edit
+    @map = Map.find(params[:id])
+  end
+
+  def update
+    @map = Map.find(params[:id])
+    if @map.user != current_user
+      return render text: 'Not Allowed', status: :forbidden
+    end
+
+    @map.update_attributes(map_params)
+    if @map.valid?
+      redirect_to map_path(@map)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def destroy
+    @map = Map.find(params[:id])
+    @map.destroy
+    redirect_to maps_path
   end
 
   private
