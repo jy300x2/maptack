@@ -18,6 +18,9 @@ class MapsController < ApplicationController
     @map = Map.find(params[:id])
   end
 
+  def destroy
+  end
+
   private
 
   def map_params
